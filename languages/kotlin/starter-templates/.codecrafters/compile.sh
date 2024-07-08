@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-mvn -B --quiet package -Ddir=/tmp/codecrafters-build-dir
+mvn -B package -Ddir=/tmp/codecrafters-build-dir
