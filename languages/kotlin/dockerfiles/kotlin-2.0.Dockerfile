@@ -10,7 +10,7 @@ WORKDIR /app
 COPY --exclude=.git --exclude=README.md . /app
 
 # Cache dependencies
-RUN mvn -B package -Ddir=/tmp/codecrafters-{{course_slug}}-target
+RUN mvn -B package -Ddir=/tmp/codecrafters-build-dir
 
 # Store cached deps (TODO: Is this needed?)
 # RUN mkdir -p /app-cached
