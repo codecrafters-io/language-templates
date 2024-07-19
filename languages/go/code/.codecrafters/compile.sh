@@ -1,12 +1,11 @@
 #!/bin/sh
 #
-# CodeCrafters runs this script before running all tests.
+# This script is used to compile your program on CodeCrafters
 #
-# - This script is commonly used to speed up heavy compilation steps.
-# - The output of this script will be rendered with the "[compile]" prefix.
+# This runs before .codecrafters/run.sh
+#
+# Learn more: https://codecrafters.io/program-interface
 
-# Ensure the script exits if any command fails
-set -e
+set -e # Exit on failure
 
-# Go doesn't use a compile step at the moment, so this is a no-op
-exit 0
+go build -o /tmp/codecrafters-build-{{course_slug}}-go app/*.go
