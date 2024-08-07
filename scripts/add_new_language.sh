@@ -56,3 +56,47 @@ EOF
 else
     echo "Skipped creating $base_dir/dockerfiles/$language_slug-<version>.Dockerfile (file already exists)"
 fi
+
+# Create .codecrafters/compile.sh
+if [ ! -f "$base_dir/code/.codecrafters/compile.sh" ]; then
+    mkdir -p "$base_dir/code/.codecrafters"
+    cat << EOF > "$base_dir/code/.codecrafters/compile.sh"
+#!/bin/sh
+#
+# This script is used to compile your program on CodeCrafters
+#
+# This runs before .codecrafters/run.sh
+#
+# Learn more: https://codecrafters.io/program-interface
+
+set -e # Exit on failure
+
+<placeholder-compilation-command>
+EOF
+    chmod +x "$base_dir/code/.codecrafters/compile.sh"
+    echo "Created $base_dir/code/.codecrafters/compile.sh"
+else
+    echo "Skipped creating $base_dir/code/.codecrafters/compile.sh (file already exists)"
+fi
+
+# Create .codecrafters/run.sh
+if [ ! -f "$base_dir/code/.codecrafters/run.sh" ]; then
+    mkdir -p "$base_dir/code/.codecrafters"
+    cat << EOF > "$base_dir/code/.codecrafters/run.sh"
+#!/bin/sh
+#
+# This script is used to run your program on CodeCrafters
+#
+# This runs after .codecrafters/compile.sh
+#
+# Learn more: https://codecrafters.io/program-interface
+
+set -e # Exit on failure
+
+<placeholder-run-command>
+EOF
+    chmod +x "$base_dir/code/.codecrafters/run.sh"
+    echo "Created $base_dir/code/.codecrafters/run.sh"
+else
+    echo "Skipped creating $base_dir/code/.codecrafters/run.sh (file already exists)"
+fi
