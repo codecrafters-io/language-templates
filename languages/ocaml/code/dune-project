@@ -1,0 +1,18 @@
+(lang dune 3.16)
+
+(name codecrafters_{{course_slug_underscorized}})
+
+(generate_opam_files true)
+
+(package
+ (name codecrafters_{{course_slug_underscorized}})
+ (maintainers "CodeCrafters <hello@codecrafters.io>")
+ (authors "CodeCrafters <hello@codecrafters.io>")
+ (synopsis "Starter code for the {{course_name}} challenge")
+ (homepage "https://codecrafters.io")
+ (bug_reports
+  "https://github.com/codecrafters-io/build-your-own-{{course_slug}}/issues")
+ (license "MIT")
+ (allow_empty true)
+ (version 0.1)
+ (depends lwt))
