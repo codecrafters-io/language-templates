@@ -33,7 +33,7 @@ else
     echo "Skipped creating $base_dir/config.yml (file already exists)"
 fi
 
-if [ ! -f "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile" ]; then
+if [ -z "$(ls -A "$base_dir/dockerfiles/$language_slug-"*.Dockerfile 2>/dev/null)" ]; then
     cat << EOF > "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
 # syntax=docker/dockerfile:1.7-labs
 FROM <placeholder-base-image>
