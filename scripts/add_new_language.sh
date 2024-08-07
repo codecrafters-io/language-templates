@@ -22,15 +22,19 @@ echo "Created $base_dir/code"
 mkdir -p "$base_dir/dockerfiles"
 echo "Created $base_dir/dockerfiles"
 
-cat << EOF > "$base_dir/config.yml"
+if [ ! -f "$base_dir/config.yml" ]; then
+    cat << EOF > "$base_dir/config.yml"
 attributes:
   required_executable: '<placeholder>'
   user_editable_file: '<placeholder>'
 EOF
+    echo "Created $base_dir/config.yml"
+else
+    echo "Skipped creating $base_dir/config.yml (file already exists)"
+fi
 
-echo "Created $base_dir/config.yml"
-
-cat << EOF > "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
+if [ ! -f "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile" ]; then
+    cat << EOF > "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
 # syntax=docker/dockerfile:1.7-labs
 FROM <placeholder-base-image>
 
@@ -48,5 +52,7 @@ RUN <placeholder-dependency-installation-command>
 # Once the heavy steps are done, we can copy all files back
 COPY . /app
 EOF
-
-echo "Created $base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
+    echo "Created $base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
+else
+    echo "Skipped creating $base_dir/dockerfiles/$language_slug-<version>.Dockerfile (file already exists)"
+fi
