@@ -17,10 +17,36 @@ base_dir="languages/$language_slug"
 
 # Create the directory structure
 mkdir -p "$base_dir/code"
+echo "Created $base_dir/code"
+
 mkdir -p "$base_dir/dockerfiles"
+echo "Created $base_dir/dockerfiles"
 
-# Create empty files
-touch "$base_dir/config.yml"
-touch "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
+cat << EOF > "$base_dir/config.yml"
+attributes:
+  required_executable: '<placeholder>'
+  user_editable_file: '<placeholder>'
+EOF
 
-echo "Directory structure for $1 has been created successfully."
+echo "Created $base_dir/config.yml"
+
+cat << EOF > "$base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
+# syntax=docker/dockerfile:1.7-labs
+FROM <placeholder-base-image>
+
+# Ensures the container is re-built if dependency files change
+ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="<placeholder-dependency-files>"
+
+WORKDIR /app
+
+# .git & README.md are unique per-repository. We ignore them on first copy to prevent cache misses
+COPY --exclude=.git --exclude=README.md . /app
+
+# Install language-specific dependencies
+RUN <placeholder-dependency-installation-command>
+
+# Once the heavy steps are done, we can copy all files back
+COPY . /app
+EOF
+
+echo "Created $base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
