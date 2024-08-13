@@ -47,7 +47,7 @@ WORKDIR /app
 COPY --exclude=.git --exclude=README.md . /app
 
 # Install language-specific dependencies
-RUN <placeholder-dependency-installation-command>
+RUN .codecrafters/compile.sh
 
 # Once the heavy steps are done, we can copy all files back
 COPY . /app
