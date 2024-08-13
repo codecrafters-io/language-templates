@@ -8,4 +8,5 @@
 
 set -e # Exit on failure
 
-mix compile
+mix escript.build
+mv codecrafters_{{course_slug_underscorized}} /tmp/codecrafters-build-{{course_slug}}-elixir
