@@ -48,9 +48,6 @@ COPY --exclude=.git --exclude=README.md . /app
 
 # Install language-specific dependencies
 RUN .codecrafters/compile.sh
-
-# Once the heavy steps are done, we can copy all files back
-COPY . /app
 EOF
     echo "Created $base_dir/dockerfiles/$language_slug-<version>.Dockerfile"
 else
