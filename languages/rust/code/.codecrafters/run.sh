@@ -6,6 +6,4 @@
 #
 # Learn more: https://codecrafters.io/program-interface
 
-set -e # Exit on failure
-
 exec /tmp/codecrafters-build-{{course_slug}}-rust/release/codecrafters-{{course_slug}} "$@"
