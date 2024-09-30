@@ -1,0 +1,14 @@
+{
+  "name": "@codecrafters/{{course-slug}}",
+  "description": "{{course-name}} challenge, from CodeCrafters",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run app/main.ts"
+  },
+  "dependencies": {
+    "async": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11"
+  }
+}
