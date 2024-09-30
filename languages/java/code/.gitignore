@@ -1,0 +1,3 @@
+java_{{course_slug}}.jar
+target/
+.idea/
