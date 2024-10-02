@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.codecrafters</groupId>
-    <artifactId>build-your-own-{{course_slug}}</artifactId>
+    <artifactId>codecrafters-{{course_slug}}</artifactId>
     <version>1.0</version>
 
     <properties>
