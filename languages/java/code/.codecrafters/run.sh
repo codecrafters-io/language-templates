@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec java -jar /tmp/codecrafters-build-{{course_slug}}-java/java_{{course_slug_underscorized}}.jar "$@"
+exec java -jar /tmp/codecrafters-build-{{course_slug}}-java/codecrafters-{{course_slug}}.jar "$@"
