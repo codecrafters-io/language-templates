@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM gcc:14.2.0
+FROM gcc:14.2.0-bookworm
 
 # Ensures the container is re-built if dependency files change
 # ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="<placeholder-dependency-files>"
