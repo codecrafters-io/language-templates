@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec $(dirname $0)/build/codecrafters-build-{{course_slug}}-c "$@"
+exec $(dirname $0)/build/{{course_slug}} "$@"
