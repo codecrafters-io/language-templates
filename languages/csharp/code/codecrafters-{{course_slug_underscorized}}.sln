@@ -1,0 +1,28 @@
+{{! This is used to switch the delimiters for our template to <% %>, cause we need a curly brace around our UUIDs. }}
+{{=<% %>=}} 
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codecrafters-<%course_slug_underscorized%>", "codecrafters-<%course_slug_underscorized%>.csproj", "{<%uppercased_uuid1%>}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{<%uppercased_uuid1%>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%uppercased_uuid1%>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%uppercased_uuid1%>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%uppercased_uuid1%>}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {<%uppercased_uuid2%>}
+	EndGlobalSection
+EndGlobal
+<%={{ }}=%>
