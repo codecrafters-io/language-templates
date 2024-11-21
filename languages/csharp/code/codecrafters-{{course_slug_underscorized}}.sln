@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{<%uppercased_uuid1%>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{<%uppercased_uuid1%>}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{<%uppercased_uuid1%>}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{<%uppercased_uuid1%>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%uppercased_uuid_1%>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%uppercased_uuid_1%>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%uppercased_uuid_1%>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%uppercased_uuid_1%>}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {<%uppercased_uuid2%>}
+		SolutionGuid = {<%uppercased_uuid_2%>}
 	EndGlobalSection
 EndGlobal
 <%={{ }}=%>
