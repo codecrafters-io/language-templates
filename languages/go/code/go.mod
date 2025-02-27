@@ -6,6 +6,6 @@
 //
 // DON'T EDIT THIS!
 
-module github.com/codecrafters-io/go-starter
+module github.com/codecrafters-io/{{course_slug}}-go-starter
 
 go 1.24.0
