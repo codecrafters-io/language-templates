@@ -1,5 +1,5 @@
 .{
-    .name = .codecrafters_{{course_slug_underscored}},
+    .name = .codecrafters_{{course_slug_underscorized}},
     .fingerprint = 0xf806bb97907ce4a5, // fingerprint needs to be manually updated
 
     // This is a [Semantic Version](https://semver.org/).
