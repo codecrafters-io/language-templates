@@ -6,9 +6,8 @@
     // In a future version of Zig it will be used for package deduplication.
     .version = "0.0.0",
 
-    // This field is optional.
-    // This is currently advisory only; Zig does not yet do anything
-    // with this value.
+    // Tracks the earliest Zig version that the package considers to be a
+    // supported use case.
     .minimum_zig_version = "0.14.0",
 
     // This field is optional.
