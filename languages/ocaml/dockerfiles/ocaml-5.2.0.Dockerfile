@@ -23,7 +23,7 @@ WORKDIR /app
 COPY --exclude=.git --exclude=README.md . /app
 
 # Cache dependencies
-RUN opam install . --yes
+RUN opam install . --yes --deps-only --with-test
 
 # This runs dune build
 RUN .codecrafters/compile.sh
