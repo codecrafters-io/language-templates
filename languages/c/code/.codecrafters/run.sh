@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec $(dirname $0)/build/{{course_slug}} "$@"
+exec $(dirname "$0")/build/{{course_slug}} "$@"
