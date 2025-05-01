@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec /tmp/codecrafters-build-csharp/codecrafters-{{course_slug}} "$@"
+exec /tmp/codecrafters-build-csharp/CodeCrafters.{{course_slug_underscorized}} "$@"
