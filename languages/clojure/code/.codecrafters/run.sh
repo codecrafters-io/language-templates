@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-java -jar target/{{course_slug}}.jar
+exec java -jar "target/{{course_slug}}.jar"
