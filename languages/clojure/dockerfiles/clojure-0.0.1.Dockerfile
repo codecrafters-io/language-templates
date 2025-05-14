@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM <placeholder-base-image>
+FROM clojure
 
 # Ensures the container is re-built if dependency files change
-ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="<placeholder-dependency-files>"
+ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="deps.edn"
 
 WORKDIR /app
 

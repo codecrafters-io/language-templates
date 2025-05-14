@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-<placeholder-compilation-command>
+clj -T:build
