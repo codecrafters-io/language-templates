@@ -1,7 +1,7 @@
 (ns {{course_slug}}.core
   (:gen-class))
 
-(defn -main []
+(defn -main [& args]
   ;; You can use print statements as follows for debugging, they'll be visible when running tests.
   (println "Logs from your program will appear here!");
 
