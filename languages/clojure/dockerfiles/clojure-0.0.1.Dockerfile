@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM clojure
+FROM clojure:1.12.0
 
 # Ensures the container is re-built if dependency files change
 ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="deps.edn"
