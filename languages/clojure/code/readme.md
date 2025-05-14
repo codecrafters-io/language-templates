@@ -12,3 +12,15 @@ clojure -M:test
 clojure -X:test:watch
 ```
 
+
+## To compile the application
+
+```shell
+clojure -T:build
+```
+
+## To run the compiled application
+
+```shell
+java -jar target/{{course_slug}}.jar
+```
