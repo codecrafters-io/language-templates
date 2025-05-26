@@ -12,7 +12,7 @@ ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project"
 USER root
 
 # Install dune
-RUN opam install dune.3.16.0 --yes
+RUN opam install dune.3.19.0 --yes
 
 # Dune path is /home/opam/.opam/5.3/bin/dune
 ENV PATH="${OPAMROOT}/5.3/bin:${PATH}"
