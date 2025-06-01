@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec java -jar "target/{{course_slug}}.jar"
+exec java -jar /tmp/codecrafters-build-{{course-slug}}-clojure/target.jar "$@"

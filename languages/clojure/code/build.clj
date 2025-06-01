@@ -2,19 +2,17 @@
   (:gen-class)
   (:require [clojure.tools.build.api :as b]))
 
-(def lib 'com.codecrafters.{{course_slug}})
-(def version (format "0.1.%s" (b/git-count-revs nil)))
-(def class-dir "target/classes")
+(def lib 'io.codecrafters.{{course_slug}})
+(def class-dir "/tmp/codecrafters-build-{{course_slug}}-clojure/classes")
 (def basis (b/create-basis {:project "deps.edn"}))
-(def uber-file "target/{{course_slug}}.jar")
+(def uber-file "/tmp/codecrafters-build-{{course_slug}}-clojure/target.jar")
 
 (defn clean [_]
-  (b/delete {:path "target"}))
+  (b/delete {:path "/tmp/codecrafters-build-{{course_slug}}-clojure"}))
 
 (defn uber [_]
   (clean nil)
-  (b/copy-dir {:src-dirs ["src/main"]
-               :target-dir class-dir})
+  (b/copy-dir {:src-dirs ["src"] :target-dir class-dir})
   (b/compile-clj {:basis basis
                   :ns-compile '[{{course_slug}}.core]
                   :class-dir class-dir})
