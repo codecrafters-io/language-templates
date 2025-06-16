@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec java -jar ./target/scala-3.7.1/{{course_slug_underscorized}}.jar "$@"
+exec java -jar ./target/scala-3.7.1/{{course_slug}}.jar "$@"
