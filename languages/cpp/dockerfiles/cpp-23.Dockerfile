@@ -2,7 +2,7 @@
 FROM gcc:14.3.0-bookworm
 
 # Ensures the container is re-built if dependency files change
-ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="vcpkg.json,vcpkg-configuration.json"
+ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="CMakeLists.txt,vcpkg.json,vcpkg-configuration.json"
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y zip=3.* && \ 
