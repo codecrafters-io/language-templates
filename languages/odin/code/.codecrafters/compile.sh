@@ -8,5 +8,5 @@
 
 set -e # Exit on failure
 
-mkdir -p /tmp/codecrafters-build--{{course_slug}}-odin
+mkdir -p /tmp/codecrafters-build-{{course_slug}}-odin
 odin build src -out:/tmp/codecrafters-build-{{course_slug}}-odin/main
