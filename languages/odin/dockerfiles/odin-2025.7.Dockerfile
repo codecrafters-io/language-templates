@@ -2,8 +2,8 @@
 FROM silkeh/clang:19-bookworm
 
 WORKDIR /Odin-install
-RUN git clone --depth 1 -b dev-2025-06 https://github.com/odin-lang/Odin.git /Odin-install \
-    && git checkout dev-2025-06 \
+RUN git clone --depth 1 -b dev-2025-07 https://github.com/odin-lang/Odin.git /Odin-install \
+    && git checkout dev-2025-07 \
     && make
 
 RUN mkdir /opt/Odin \
