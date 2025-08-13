@@ -5,7 +5,7 @@ FROM ocaml/opam:debian-11-ocaml-5.3
 ENV OPAMROOT /home/opam/.opam
 
 # Ensures the container is re-built if dune/dune-project changes
-ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project"
+ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project,codecrafters_{{course_slug_underscorized}}.opam"
 
 # Change to root user. All other images seem to use root, so let's do the same here
 # hadolint ignore=DL3002
