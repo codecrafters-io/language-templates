@@ -1,13 +1,16 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM alpine:3.20
+FROM debian:bookworm
 
-RUN apk add --no-cache 'xz>=5.6' 'curl>=8.9'
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y xz-utils=5.4.1-1 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Download and install Zig
-RUN curl -O https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz \
-    && tar -xf zig-linux-x86_64-0.14.0.tar.xz \
-    && mv zig-linux-x86_64-0.14.0 /usr/local/zig \
-    && rm zig-linux-x86_64-0.14.0.tar.xz
+RUN curl -O https://ziglang.org/download/0.15.1/zig-x86_64-linux-0.15.1.tar.xz \
+    && tar -xf zig-x86_64-linux-0.15.1.tar.xz \
+    && mv zig-x86_64-linux-0.15.1 /usr/local/zig \
+    && rm zig-x86_64-linux-0.15.1.tar.xz
 
 # Add Zig to PATH
 ENV PATH="/usr/local/zig:${PATH}"
