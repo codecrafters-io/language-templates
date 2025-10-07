@@ -8,4 +8,7 @@
 
 set -e # Exit on failure
 
-mvn -B package -Ddir=/tmp/codecrafters-build-{{course_slug}}-kotlin
+gradle build
+cd /tmp/codecrafters-build-{{course_slug}}-kotlin/distributions
+rm -rf app
+tar -xvf app.tar
