@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM maven:3.9.9-eclipse-temurin-24-alpine
+FROM maven:3.9.11-eclipse-temurin-25-alpine
 
 # Ensures the container is re-built if dependency files change
 ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="pom.xml"
