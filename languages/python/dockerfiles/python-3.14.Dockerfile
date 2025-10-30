@@ -7,6 +7,8 @@ ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="pyproject.toml,uv.lock"
 # Prevents Python from buffering stdout and stderr
 ENV PYTHONUNBUFFERED=1
 
+ENV PYTHONPATH=/app:$PYTHONPATH
+
 WORKDIR /app
 
 # .git & README.md are unique per-repository. We ignore them on first copy to prevent cache misses
