@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec uv run --quiet app/main.py "$@"
+exec uv run --quiet -m app.main "$@"
