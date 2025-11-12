@@ -37,4 +37,3 @@ RUN .codecrafters/compile.sh
 
 RUN mkdir -p /app-cached
 RUN if [ -d "/app/build" ]; then mv /app/build /app-cached; fi
-RUN if [ -d "/app/vcpkg_installed" ]; then mv /app/vcpkg_installed /app-cached; fi
