@@ -8,4 +8,4 @@
 
 module github.com/codecrafters-io/{{course_slug}}-starter-go
 
-go 1.24.0
+go 1.25.0
