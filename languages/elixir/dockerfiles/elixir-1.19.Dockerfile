@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM elixir:1.18.3-alpine
+FROM elixir:1.19.4-alpine
 
 # Ensures the container is re-built if dependency files change
 ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="mix.exs"
