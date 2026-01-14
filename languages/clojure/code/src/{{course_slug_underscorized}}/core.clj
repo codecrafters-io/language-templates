@@ -6,6 +6,6 @@
   (binding [*out* *err*]
     (println "Logs from your program will appear here!"))
 
-  ;; Uncomment this block to pass the first stage
+  ;; TODO: Uncomment the code below to pass the first stage
   ;;(println "TODO: Implement starter code")
   )
