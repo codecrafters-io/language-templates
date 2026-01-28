@@ -7,7 +7,7 @@ authors: ["CodeCrafters <hello@codecrafters.io>"]
 license: "MIT"
 homepage: "https://codecrafters.io"
 bug-reports:
-  "https://github.com/codecrafters-io/build-your-own-http-server/issues"
+  "https://github.com/codecrafters-io/build-your-own-{{course_slug}}/issues"
 depends: [
   "dune" {>= "3.21"}
   "odoc" {with-doc}
