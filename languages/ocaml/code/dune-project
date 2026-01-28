@@ -14,5 +14,4 @@
   "https://github.com/codecrafters-io/build-your-own-{{course_slug}}/issues")
  (license "MIT")
  (allow_empty true)
- (version 0.1)
- (depends lwt))
+ (version 0.1))

@@ -1,21 +1,21 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM ocaml/opam:debian-11-ocaml-5.3
+FROM ocaml/opam:debian-13-ocaml-5.4
 
 # The image uses opam as the user, so let's set OPAMROOT to re-use whatever is already built
 ENV OPAMROOT /home/opam/.opam
 
 # Ensures the container is re-built if dune/dune-project changes
-ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project,codecrafters_{{course_slug_underscorized}}.opam"
+ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project,codecrafters_http_server.opam"
 
 # Change to root user. All other images seem to use root, so let's do the same here
 # hadolint ignore=DL3002
 USER root
 
 # Install dune
-RUN opam install dune.3.19.0 --yes
+RUN opam install dune.3.21.0 --yes
 
-# Dune path is /home/opam/.opam/5.3/bin/dune
-ENV PATH="${OPAMROOT}/5.3/bin:${PATH}"
+# Dune path is /home/opam/.opam/5.4/bin/dune
+ENV PATH="${OPAMROOT}/5.4/bin:${PATH}"
 
 WORKDIR /app
 

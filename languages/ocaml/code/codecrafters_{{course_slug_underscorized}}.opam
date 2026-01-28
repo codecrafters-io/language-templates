@@ -6,10 +6,10 @@ maintainer: ["CodeCrafters <hello@codecrafters.io>"]
 authors: ["CodeCrafters <hello@codecrafters.io>"]
 license: "MIT"
 homepage: "https://codecrafters.io"
-bug-reports: "https://github.com/codecrafters-io/build-your-own-{{course_slug}}/issues"
+bug-reports:
+  "https://github.com/codecrafters-io/build-your-own-http-server/issues"
 depends: [
-  "dune" {>= "3.16"}
-  "lwt"
+  "dune" {>= "3.21"}
   "odoc" {with-doc}
 ]
 build: [
@@ -26,3 +26,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+x-maintenance-intent: ["(latest)"]
