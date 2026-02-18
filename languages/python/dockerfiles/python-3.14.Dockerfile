@@ -9,6 +9,8 @@ ENV PYTHONUNBUFFERED=1
 
 ENV PYTHONPATH=/app:$PYTHONPATH
 
+RUN apk add --no-cache --upgrade 'bash>=5.3'
+
 WORKDIR /app
 
 # .git & README.md are unique per-repository. We ignore them on first copy to prevent cache misses
