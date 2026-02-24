@@ -1,0 +1,5 @@
+name: codecrafters-{{course_slug}}
+version: 0.1.0
+
+environment:
+  sdk: ^3.11.0
