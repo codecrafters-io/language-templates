@@ -9,4 +9,4 @@
 set -e # Exit on failure
 
 dart pub get
-dart compile exe bin/main.dart -o /tmp/codecrafters-build-claude-code-dart
+dart compile exe bin/main.dart -o /tmp/codecrafters-build-{{course_slug}}-dart

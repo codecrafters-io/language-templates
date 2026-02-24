@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec /tmp/codecrafters-build-claude-code-dart "$@"
+exec /tmp/codecrafters-build-{{course_slug}}-dart "$@"
