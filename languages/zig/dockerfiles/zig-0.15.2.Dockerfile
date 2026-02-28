@@ -3,6 +3,8 @@ FROM debian:trixie
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
+        ca-certificates=20250419 \
+        curl=8.14.1-2+deb13u2 \
         libncurses-dev=6.5+20250216-2 \
         libreadline-dev=8.2-6 \
         xz-utils=5.8.1-1 && \
