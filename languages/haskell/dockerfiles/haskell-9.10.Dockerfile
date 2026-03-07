@@ -1,4 +1,4 @@
-FROM haskell:9.8.4-bullseye
+FROM haskell:9.10-bookworm
 
 # Ensures the container is re-built if go.mod or go.sum changes
 ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="stack.yaml,package.yaml,stack.yaml.lock"
