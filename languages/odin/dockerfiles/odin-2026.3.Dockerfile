@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM silkeh/clang:19-bookworm
+FROM silkeh/clang:21-trixie
 
 WORKDIR /Odin-install
 RUN git clone --depth 1 -b dev-2026-03 https://github.com/odin-lang/Odin.git /Odin-install \
