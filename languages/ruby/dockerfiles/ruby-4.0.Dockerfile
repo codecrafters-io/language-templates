@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM ruby:3.4-alpine3.23
+FROM ruby:4.0-alpine3.23
 
 # Required for installing the json/async gems
 RUN apk add --no-cache \
