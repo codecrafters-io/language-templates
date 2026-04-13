@@ -11,7 +11,6 @@ ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project,codecrafters_{{course_
 # hadolint ignore=DL3002
 USER root
 
-# hadolint ignore=DL3002
 # hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
