@@ -11,11 +11,14 @@ ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="dune,dune-project,codecrafters_{{course_
 # hadolint ignore=DL3002
 USER root
 
+# hadolint ignore=DL3002
+# hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-        libncurses-dev=6.5+20250216-2 \
-        libreadline-dev=8.2-6 \
-        xz-utils=5.8.1-1 && \
+        libncurses-dev \
+        libreadline-dev \
+        pkg-config \
+        xz-utils && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
