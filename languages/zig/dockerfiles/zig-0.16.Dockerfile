@@ -1,19 +1,17 @@
 # syntax=docker/dockerfile:1.7-labs
 FROM debian:trixie
 
+# hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y \
-        libncurses-dev=6.5+20250216-2 \
-        libreadline-dev=8.2-6 \
-        xz-utils=5.8.1-1 && \
+    apt-get install --no-install-recommends -y xz-utils && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and install Zig
-RUN curl -O https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz \
-    && tar -xf zig-x86_64-linux-0.15.2.tar.xz \
-    && mv zig-x86_64-linux-0.15.2 /usr/local/zig \
-    && rm zig-x86_64-linux-0.15.2.tar.xz
+RUN curl -O https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz \
+    && tar -xf zig-x86_64-linux-0.16.0.tar.xz \
+    && mv zig-x86_64-linux-0.16.0 /usr/local/zig \
+    && rm zig-x86_64-linux-0.16.0.tar.xz
 
 # Add Zig to PATH
 ENV PATH="/usr/local/zig:${PATH}"
