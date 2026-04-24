@@ -2,8 +2,8 @@
 FROM silkeh/clang:21-trixie
 
 WORKDIR /Odin-install
-RUN git clone --depth 1 -b dev-2026-03 https://github.com/odin-lang/Odin.git /Odin-install \
-    && git checkout dev-2026-03 \
+RUN git clone --depth 1 -b dev-2026-04 https://github.com/odin-lang/Odin.git /Odin-install \
+    && git checkout dev-2026-04 \
     && make
 
 RUN mkdir /opt/Odin \
