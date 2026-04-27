@@ -8,4 +8,5 @@
 
 set -e # Exit on failure
 
-exec php app/main.php "$@"
+SCRIPT_DIR="$(dirname "$0")"
+exec php "$SCRIPT_DIR/app/main.php" "$@"
