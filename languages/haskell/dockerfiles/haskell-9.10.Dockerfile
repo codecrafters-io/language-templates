@@ -4,7 +4,7 @@ FROM haskell:9.10-bookworm
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         pkg-config \
-    apt-get clean && \
+    && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Ensures the container is re-built if dependency files change
