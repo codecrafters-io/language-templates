@@ -1,6 +1,13 @@
 FROM haskell:9.10-bookworm
 
-# Ensures the container is re-built if go.mod or go.sum changes
+# hadolint ignore=DL3008
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+        pkg-config \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Ensures the container is re-built if dependency files change
 ENV CODECRAFTERS_DEPENDENCY_FILE_PATHS="stack.yaml,package.yaml,stack.yaml.lock"
 
 RUN mkdir -p /etc/stack
