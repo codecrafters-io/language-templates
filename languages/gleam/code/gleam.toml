@@ -1,4 +1,4 @@
-name = "codecrafters_{{course_slug_underscorized}}"
+name = "main"
 version = "1.0.0"
 
 # For a full reference of all the available options, you can have a look at
