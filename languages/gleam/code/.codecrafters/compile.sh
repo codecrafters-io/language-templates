@@ -8,6 +8,5 @@
 
 set -e # Exit on failure
 
-cd "$(dirname "$0")"
 gleam build
 gleam run -m gleescript
