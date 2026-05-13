@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec "$(dirname "$0")/{{course_slug_underscorized}}" "$@"
+exec "$(dirname "$0")/codecrafters_{{course_slug_underscorized}}" "$@"

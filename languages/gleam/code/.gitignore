@@ -2,4 +2,4 @@
 *.ez
 /build
 erl_crash.dump
-{{course_slug_underscorized}}
+codecrafters_{{course_slug_underscorized}}
