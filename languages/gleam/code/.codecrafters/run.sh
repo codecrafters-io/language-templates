@@ -8,4 +8,4 @@
 
 set -e # Exit on failure
 
-exec gleam run --no-print-progress --module main -- "$@"
+exec "$(dirname "$0")/{{course_slug_underscorized}}" "$@"
