@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM ubuntu:24.04
+FROM gcc:15.2.0-trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ALIRE_VERSION=2.1.1
