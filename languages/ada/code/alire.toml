@@ -8,5 +8,14 @@ maintainers-logins = ["codecrafters-io"]
 licenses = "MIT"
 website = "https://codecrafters.io"
 
+[[depends-on]]
+[depends-on.'case(distribution)'.'debian|ubuntu']
+gnat_external = "*"
+gprbuild = "*"
+
+[depends-on.'case(distribution)'.'...']
+gnat_native = "*"
+gprbuild = "*"
+
 executables = ["main"]
 project-files = ["codecrafters_{{course_slug_underscorized}}.gpr"]
