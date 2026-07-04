@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
-FROM gcc:15.2.0-trixie
+FROM --platform=linux/amd64 gcc:15.2.0-trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ALIRE_VERSION=2.1.1
@@ -11,8 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     git \
-    gnat \
-    gprbuild \
     make \
     unzip \
     xz-utils \
