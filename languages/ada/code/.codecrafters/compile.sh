@@ -8,4 +8,5 @@
 
 set -e # Exit on failure
 
+alr toolchain --select gnat_external gprbuild
 alr build
