@@ -1,0 +1,6 @@
+/alire/
+/bin/
+/obj/
+
+*.ali
+*.o
