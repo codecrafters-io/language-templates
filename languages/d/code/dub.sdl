@@ -1,0 +1,5 @@
+name "codecrafters-{{course_slug}}-d"
+
+targetType "executable"
+targetPath "/tmp/"
+targetName "codecrafters-build-{{course_slug}}-d"

@@ -1,0 +1,3 @@
+attributes:
+  required_executable: dub
+  user_editable_file: source/app.d
