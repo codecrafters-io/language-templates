@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/{{course_slug}}
+{{course_slug}}.so
+{{course_slug}}.dylib
+{{course_slug}}.dll
+lib{{course_slug}}.a
+{{course_slug}}.a
+{{course_slug}}.lib
+{{course_slug}}-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
