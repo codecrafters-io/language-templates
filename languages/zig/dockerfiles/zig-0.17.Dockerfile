@@ -12,10 +12,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and install Zig
-RUN curl -O https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz \
-    && tar -xf zig-x86_64-linux-0.16.0.tar.xz \
-    && mv zig-x86_64-linux-0.16.0 /usr/local/zig \
-    && rm zig-x86_64-linux-0.16.0.tar.xz
+RUN curl -O https://ziglang.org/download/0.17.0/zig-x86_64-linux-0.17.0.tar.xz \
+    && tar -xf zig-x86_64-linux-0.17.0.tar.xz \
+    && mv zig-x86_64-linux-0.17.0 /usr/local/zig \
+    && rm zig-x86_64-linux-0.17.0.tar.xz
 
 # Add Zig to PATH
 ENV PATH="/usr/local/zig:${PATH}"
